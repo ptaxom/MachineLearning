@@ -149,7 +149,7 @@ public class PerceptronNet implements MultiLayerNet {
         oldDWeight.multiply(epsilon); //(2.19)
 
         layerWeights.add(oldDWeight); //Добавление eps * w(t-1) (2.19)
-        layerValue.add(newDelta);     //Добавление новой матрицы изменения весов
+        layerWeights.add(newDelta);     //Добавление новой матрицы изменения весов
 
         oldDWeight.copy(newDelta);   //Сохранение новых dW в старую
     }
